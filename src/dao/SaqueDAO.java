@@ -1,9 +1,10 @@
-package arqdesis_aula02;
+package dao;
 
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import arqdesis_aula02.ConnectionFactory;
+import factory.ConnectionFactory;
+import to.SaqueTO;
 
 public class SaqueDAO {
 

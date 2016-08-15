@@ -1,8 +1,11 @@
-package arqdesis_aula02;
+package controller;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
+
+import dao.ExtratoDAO;
+import to.ExtratoTO;
 
 public class Extrato {
 

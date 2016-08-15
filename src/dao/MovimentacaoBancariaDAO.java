@@ -1,7 +1,10 @@
-package arqdesis_aula02;
+package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+
+import factory.ConnectionFactory;
+import to.MovimentacaoBancariaTO;
 
 public class MovimentacaoBancariaDAO {
 

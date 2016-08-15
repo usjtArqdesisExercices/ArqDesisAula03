@@ -1,6 +1,9 @@
-package arqdesis_aula02;
+package controller;
 
 import java.util.Date;
+
+import dao.SaqueDAO;
+import to.SaqueTO;
 
 public class Saque {
 
@@ -73,11 +76,10 @@ public class Saque {
 	
 	public void createDate(){
 		
-		Date minhaData = new Date();  
-		long mili =  minhaData.getTime();  
-		java.sql.Date dataSQL = new java.sql.Date(mili); 
+		java.util.Date utilDate = new java.util.Date();
+		java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
 		
-		setData(dataSQL);	
+		setData(sqlDate);	
 	}
 	
 

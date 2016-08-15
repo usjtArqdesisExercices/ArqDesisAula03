@@ -8,6 +8,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="F:/Pen7/USJT - Ciencia da Computação/3MCPN/1ºSem/Arquit e Desenv de Sistemas/mysql_connector_java_5_1_13_bin.jar"/>
+	<classpathentry kind="lib" path="F:/BKP_ABIMAS/Area De Trabalho/Pessoal/USJT-Ciencias/3MCPN/1ºSem/Arquit e Desenv de Sistemas/mysql_connector_java_5_1_13_bin.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

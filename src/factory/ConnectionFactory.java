@@ -1,4 +1,4 @@
-package arqdesis_aula02;
+package factory;
 
 
 import java.sql.Connection;

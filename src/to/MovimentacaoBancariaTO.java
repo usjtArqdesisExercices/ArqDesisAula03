@@ -5,7 +5,7 @@ import java.sql.Date;
 public class MovimentacaoBancariaTO {
 	
 	public int	 	idCliente;
-	public double	valorRetirado;
+	public double	valorMovimentcao;
 	public double	saldoAtual;
 	public int		tipoMovimentacao;
 	public Date		data;
@@ -14,8 +14,8 @@ public class MovimentacaoBancariaTO {
 		return idCliente;
 	}
 
-	public double getValorRetirado() {
-		return valorRetirado;
+	public double getValorMovimentcao() {
+		return valorMovimentcao;
 	}
 
 	public double getSaldoAtual() {
@@ -34,8 +34,8 @@ public class MovimentacaoBancariaTO {
 		this.idCliente = idCliente;
 	}
 
-	public void setValorRetirado(double valorRetirado) {
-		this.valorRetirado = valorRetirado;
+	public void setValorMovimentcao(double valorRetirado) {
+		this.valorMovimentcao = valorRetirado;
 	}
 
 	public void setSaldoAtual(double saldoAtual) {
@@ -48,6 +48,31 @@ public class MovimentacaoBancariaTO {
 
 	public void setData(Date data) {
 		this.data = data;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		MovimentacaoBancariaTO other = (MovimentacaoBancariaTO) obj;
+		if (idCliente != other.idCliente)
+			return false;
+		if (saldoAtual != other.saldoAtual)
+			return false;
+		if (valorMovimentcao != other.valorMovimentcao)
+			return false;
+		if (tipoMovimentacao != other.tipoMovimentacao)
+			return false;		
+		if (data == null) {
+			if (other.data != null)
+				return false;
+		} else if (!data.equals(other.data))
+			return false;
+		return true;
 	}
 	
 

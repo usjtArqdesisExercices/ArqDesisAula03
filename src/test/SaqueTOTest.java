@@ -23,21 +23,23 @@ public class SaqueTOTest {
 	}
 	
 	@Test
-	public void testGet() {
+	public void test01Get() {
 		assertEquals("getIdCliente", to.getIdCliente(), 10);
-		assertEquals(to.getSaldoAtual(), 600.00, 600.00);
-		assertEquals(to.getValorSaque(), 100.00, 100.00);
+		assertEquals(to.getSaldoAtual(), 600.00, 0);
+		assertEquals(to.getValorSaque(), 100.00, 0);
 		assertEquals("getData", to.getData(), sqlDate);
 	}
 	
 	@Test
-	public void testEquals() {
+	public void test02Equals() {
 		
-		SaqueTO copia = new SaqueTO();
-		copia.setIdCliente(to.getIdCliente());
-		copia.setSaldoAtual(to.getSaldoAtual());
-		copia.setValorSaque(to.getValorSaque());
-		copia.setData(to.getData());
+		SaqueTO copy = new SaqueTO();
+		copy.setIdCliente(to.getIdCliente());
+		copy.setSaldoAtual(to.getSaldoAtual());
+		copy.setValorSaque(to.getValorSaque());
+		copy.setData(to.getData());
+		
+		assertEquals("teste to igual a copia", to, copy);
 	
 		
 	}

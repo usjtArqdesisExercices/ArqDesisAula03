@@ -24,7 +24,7 @@ public class MovimentacaoBancariaDAO {
 														// Saque / 3 - Debito
 														// Auto
 			stm.setInt(3, 2); // 1 - Credito / 2 - Debito
-			stm.setDouble(4, to.getValorRetirado());
+			stm.setDouble(4, to.getValorMovimentcao());
 			stm.setDouble(5, to.getSaldoAtual());
 			stm.setDate(6, to.getData());
 			stm.executeUpdate();

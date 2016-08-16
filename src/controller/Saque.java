@@ -1,6 +1,6 @@
 package controller;
 
-import java.util.Date;
+import java.sql.Date;
 
 import dao.SaqueDAO;
 import to.SaqueTO;
@@ -81,6 +81,29 @@ public class Saque {
 		
 		setData(sqlDate);	
 	}
+	
+	@Override	
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Saque other = (Saque) obj;
+		if (idCliente != other.idCliente)
+			return false;
+		if (saldoAtual != other.saldoAtual)
+			return false;
+		if (valorSaque != other.valorSaque)
+			return false;
+		if (data == null) {
+			if (other.data != null)
+				return false;
+		} else if (!data.equals(other.data))
+			return false;
+		return true;
+	}	
 	
 
 }

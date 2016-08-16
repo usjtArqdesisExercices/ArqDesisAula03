@@ -40,5 +40,28 @@ public class SaqueTO {
 	public void setValorSaque(double valorSaque) {
 		this.valorSaque = valorSaque;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SaqueTO other = (SaqueTO) obj;
+		if (idCliente != other.idCliente)
+			return false;
+		if (saldoAtual != other.saldoAtual)
+			return false;
+		if (valorSaque != other.valorSaque)
+			return false;
+		if (data == null) {
+			if (other.data != null)
+				return false;
+		} else if (!data.equals(other.data))
+			return false;
+		return true;
+	}
 
 }

@@ -3,11 +3,11 @@ package test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
-import controller.MovimentacaoBancaria;
+
 
 public class ExtratoTest {
 	
-	MovimentacaoBancaria movBanc, copy;
+	/*MovimentacaoBancaria movBanc, copy;
 	java.util.Date utilDate = new java.util.Date();
 	java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());		
 	
@@ -26,5 +26,5 @@ public class ExtratoTest {
 		assertEquals("Teste movBanc igual copy", movBanc, copy); 
 		
 	}
-
+*/
 }

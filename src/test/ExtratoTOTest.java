@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import to.MovimentacaoBancariaTO;
 
-public class MovimentacaoBancariaTOTest {
+public class ExtratoTOTest {
 	
 	MovimentacaoBancariaTO to;
 	java.util.Date utilDate = new java.util.Date();
@@ -19,6 +19,7 @@ public class MovimentacaoBancariaTOTest {
 		to = new MovimentacaoBancariaTO();
 		to.setIdCliente(3);
 		to.setTipoMovimentacao(2);
+		to.setTipoCredDeb(2);
 		to.setValorMovimentcao(100.00);
 		to.setSaldoAtual(1500.00);
 		to.setData(sqlDate);
@@ -28,6 +29,7 @@ public class MovimentacaoBancariaTOTest {
 	public void test00Get() {
 		assertEquals("getIdCliente", to.getIdCliente(), 3);
 		assertEquals("getTipoMovimentacao", to.getTipoMovimentacao(), 2);
+		assertEquals("getTipoCredDeb", to.getTipoCredDeb(), 2);
 		assertEquals(to.getValorMovimentcao(), 100.00, 0);
 		assertEquals(to.getSaldoAtual(), 1500.00, 0);
 		assertEquals("getData", to.getData(), sqlDate);	
@@ -39,6 +41,7 @@ public class MovimentacaoBancariaTOTest {
 		MovimentacaoBancariaTO copy = new MovimentacaoBancariaTO();
 		copy.setIdCliente(to.getIdCliente());
 		copy.setTipoMovimentacao(to.getTipoMovimentacao());
+		copy.setTipoCredDeb(to.getTipoCredDeb());
 		copy.setValorMovimentcao(to.getValorMovimentcao());
 		copy.setSaldoAtual(to.getSaldoAtual());
 		copy.setData(to.getData());

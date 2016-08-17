@@ -2,7 +2,7 @@ package test;
 
 import controller.Saque;
 
-public class SaqueTeste {
+public class MainSaqueTeste {
 	
 	public static void main(String args[]){
 			

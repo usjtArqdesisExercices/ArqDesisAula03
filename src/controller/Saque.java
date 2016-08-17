@@ -68,9 +68,9 @@ public class Saque {
 	
 	public void salvaMovBanc(){
 		
-		MovimentacaoBancaria movBancaria = new MovimentacaoBancaria(idCliente, valorSaque, saldoAtual, 2, data);
+		Extrato extrato = new Extrato(idCliente, valorSaque, saldoAtual, 2, 2, data);
 		
-		movBancaria.salvaDebito();		
+		extrato.salvaExtrato();		
 	}
 	
 	

@@ -5,7 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 import controller.MovimentacaoBancaria;
 
-public class MovimentacaoBancariaTest {
+public class ExtratoTest {
 	
 	MovimentacaoBancaria movBanc, copy;
 	java.util.Date utilDate = new java.util.Date();

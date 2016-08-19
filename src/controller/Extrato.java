@@ -15,8 +15,8 @@ public class Extrato {
 	public Date data;
 	private Date dataInicial;
 	private Date dataFinal;
-
-	public Extrato(int idCliente, double valorRetirado, double saldoAtual, int tipoMovimentacao, int tipoCredDeb ,Date data) {
+	
+	public Extrato(int idCliente, double valorRetirado, double saldoAtual, int tipoMovimentacao, int tipoCredDeb, Date data) {
 		super();
 		this.idCliente = idCliente;
 		this.valorMovimentacao = valorRetirado;
@@ -105,7 +105,7 @@ public class Extrato {
 
 	public void salvaExtrato() {
 
-		ExtratoDAO movBancariaDAO = new ExtratoDAO();
+		ExtratoDAO extratoDAO = new ExtratoDAO();
 		ExtratoTO extratoTO = new ExtratoTO();
 		extratoTO.setIdCliente(idCliente);
 		extratoTO.setSaldoAtual(saldoAtual);
@@ -113,11 +113,11 @@ public class Extrato {
 		extratoTO.setIdTipoMovimentacao(IdTipoMovimentacao);
 		extratoTO.setTipoCredDeb(2);
 		extratoTO.setData((java.sql.Date) data);
-		movBancariaDAO.salvaDebito(extratoTO);
+		extratoDAO.salvaExtrato(extratoTO);
 
 	}
 
-	public <E> void consultaExtrato() {
+	public <E> ArrayList<ExtratoTO> consultaExtrato() {
 
 		ExtratoDAO extDAO = new ExtratoDAO();
 		ExtratoTO extTO = new ExtratoTO();
@@ -135,16 +135,8 @@ public class Extrato {
 					+ "\nTipo Movimentação: " + extrato.get(i).getIdTipoMovimentacao() + "\nData Movimentacao: "
 					+ extrato.get(i).getData() + "\n-------------------------------------------------");
 		}
-	}
-
-	public void createDate() {
-
-		Date minhaData = new Date();
-		long mili = minhaData.getTime();
-		java.sql.Date dataSQL = new java.sql.Date(mili);
-
-		setDataFinal(dataSQL);
-		setDataInicial(dataSQL);
+		
+		return extrato;
 	}
 
 	@Override

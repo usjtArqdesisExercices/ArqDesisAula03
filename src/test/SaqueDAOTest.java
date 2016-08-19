@@ -18,9 +18,9 @@ public class SaqueDAOTest {
 
 		dao = new SaqueDAO();
 		to = new SaqueTO();
-		to.setIdCliente(3);
-		to.setSaldoAtual(600.00);
-		to.setValorSaque(150.00);
+		to.setIdCliente(1);
+		to.setSaldoAtual(300.00);
+		to.setValorSaque(700.00);
 		to.setData(sqlDate);
 
 	}
@@ -44,12 +44,10 @@ public class SaqueDAOTest {
 		fixture.setIdCliente(1);
 		fixture.setSaldoAtual(300.00);
 		fixture.setValorSaque(700.00);
-		fixture.setData(sqlDate);
+		fixture.setData(to.getData());
 		SaqueTO novo = dao.carregaUtilmoSaque(1);
-		novo.setData(sqlDate);
-		assertEquals("Teste Carregar Ultimo Saque", novo, fixture);
-		
-		
+		novo.setData(to.getData());
+		assertEquals("Teste Carregar Ultimo Saque", novo, fixture);	
 	}
 
 }

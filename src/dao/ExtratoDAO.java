@@ -14,7 +14,7 @@ public class ExtratoDAO {
 
 	}
 
-	public void salvaDebito(ExtratoTO to) {
+	public void salvaExtrato(ExtratoTO to) {
 
 		String sqlInsert = "INSERT INTO MOVIMENTACAO_BANCARIA (CodCliente, IdTipoMovimentacao, TipoCredDeb, ValorMovimentacao, SaldoAtual, DataMovimentacao) VALUES (?, ?, ?, ?, ?, ?)";
 
@@ -47,10 +47,8 @@ public class ExtratoDAO {
 		try (Connection conn = ConnectionFactory.obtemConexao();
 				PreparedStatement stm = conn.prepareStatement(sqlSelect);) {
 			stm.setInt(1, to.getIdCliente());
-			stm.setString(2, "2016-08-13");
-			stm.setString(3, "2016-08-13");
-			//stm.setDate(2, to.getDataInicial());
-			//stm.setDate(3, to.getDataFinal());
+			stm.setDate(2, to.getDataInicial());
+			stm.setDate(3, to.getDataFinal());
 			 
 
 			try (ResultSet rs = stm.executeQuery();) {
@@ -78,6 +76,6 @@ public class ExtratoDAO {
 		}
 
 		return extrato;
-	}
+	}	
 
 }

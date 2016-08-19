@@ -40,8 +40,6 @@ public class SaqueTOTest {
 		copy.setData(to.getData());
 		
 		assertEquals("teste to igual a copia", to, copy);
-	
-		
 	}
 	
 

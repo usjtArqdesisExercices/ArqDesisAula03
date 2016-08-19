@@ -12,6 +12,10 @@ public class Saque {
 	public double	saldoAtual;
 	public Date		data;
 	
+	public Saque(){
+		
+	}
+	
 	public Saque(int idCliente, double valorSaque, double saldoAtual) {
 		super();
 		this.idCliente = idCliente;
@@ -73,13 +77,15 @@ public class Saque {
 		extrato.salvaExtrato();		
 	}
 	
-	
-	public void createDate(){
+	public void carregaUtilmoSaque(){
 		
-		java.util.Date utilDate = new java.util.Date();
-		java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+		SaqueDAO saqueDAO = new SaqueDAO();
+		SaqueTO saqueTO = saqueDAO.carregaUtilmoSaque(idCliente);
 		
-		setData(sqlDate);	
+		setIdCliente(saqueTO.getIdCliente());
+		setValorSaque(saqueTO.getValorSaque());
+		setSaldoAtual(saqueTO.getSaldoAtual());
+		setData(saqueTO.getData());
 	}
 	
 	@Override	

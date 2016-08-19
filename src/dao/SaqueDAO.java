@@ -32,8 +32,7 @@ public class SaqueDAO {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return to;
-		
+		return to;		
 	}
 	
 	public SaqueTO carregaUtilmoSaque(int idCliente) {
